@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>101 Things to Chat to God About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3f94d7 0%, #83c5ec 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #3f94d7;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+            line-height: 1.6;
+            color: #4a5568;
+            border-left: 5px solid #3f94d7;
+        }
+        
+        .intro h3 {
+            color: #3f94d7;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .question-display {
+            background: linear-gradient(135deg, #a2c31c 0%, #b8d629 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #8cb316;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question-display::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .question-text {
+            font-size: 1.3em;
+            color: #ffffff;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .placeholder-text {
+            color: #a0aec0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .generate-btn {
+            background: linear-gradient(135deg, #a2c31c 0%, #8cb316 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(162, 195, 28, 0.3);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(162, 195, 28, 0.4);
+            background: linear-gradient(135deg, #8cb316 0%, #7aa313 100%);
+        }
+        
+        .generate-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .stats {
+            margin-top: 20px;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        .reset-btn {
+            background: linear-gradient(135deg, #f59c00 0%, #e0890a 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 0.9em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(245, 156, 0, 0.3);
+        }
+        
+        .reset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(237, 137, 54, 0.4);
+            background: linear-gradient(135deg, #dd6b20 0%, #c05621 100%);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .question-text {
+                font-size: 1.1em;
+            }
+            
+            .generate-btn {
+                padding: 12px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>101 Things to Chat to God About</h1>
+        <p class="subtitle">Conversation starters for meaningful moments</p>
+        
+        <div class="intro">
+            <h3>How to Use This Tool</h3>
+            <p>Sometimes, it's helpful to have some ideas of things to help you start chatting to God. Conversation is best when it's two-way! So remember to listen if God is saying anything back and then carry on the conversation.</p>
+            <br>
+            <p>Think of these ideas as conversation starters rather than stand-alone topics. It doesn't really matter what you chat about - the idea is just to keep connecting with God and weave it into any and every part of your day. You could use this while putting on shoes, in the bath, or anytime you want to start a conversation with God.</p>
+        </div>
+        
+        <div class="question-display" id="questionDisplay">
+            <p class="placeholder-text">Click the button below to get a conversation starter!</p>
+        </div>
+        
+        <button class="generate-btn" id="generateBtn" onclick="generateQuestion()">
+            Get a Question
+        </button>
+        
+        <div class="stats" id="stats">
+            <span id="questionCount">Questions used: 0/101</span>
+            <button class="reset-btn" id="resetBtn" onclick="resetQuestions()" style="display: none;">
+                Start Over
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            "Something that makes you laugh",
+            "The most expensive thing you've ever broken",
+            "Something that makes you feel worried",
+            "How you feel when people argue around you",
+            "Three words that you think describe you best",
+            "The funniest joke you've ever heard",
+            "Something you wish had never happened",
+            "Something you'd like Him to help you change",
+            "When you feel most lonely",
+            "The best thing about being you",
+            "If you could have any animal in the world as a pet, what you would choose and why",
+            "Something that's bothering you at the moment",
+            "What makes you feel most excited",
+            "Your favourite food",
+            "The last time you knew you were right",
+            "Your favourite colour",
+            "Something that makes your family special",
+            "Your favourite TV programme",
+            "Tell him a joke",
+            "Tell him a story where you are both main characters",
+            "What mythical creature you wish actually existed",
+            "Something that you don't understand",
+            "The funniest name of someone you know",
+            "Where you'd like to be living in 10 years",
+            "Something you found out that you wish you didn't know",
+            "The strangest outfit you've ever seen someone wearing",
+            "A word that you find hard to spell",
+            "Something that you hate other people doing but you know you do too",
+            "Tell Him what you love doing more than anything else",
+            "A time something started out badly for you but ended really well",
+            "Which animal you'd most like as a pet",
+            "Somewhere that you don't feel welcome",
+            "Your craziest teacher",
+            "If your clothes had to be all the same colour, which colour you'd choose",
+            "The last photo you took",
+            "The spiciest thing you've ever eaten",
+            "A movie, picture or video that always makes you laugh, no matter how many times you see it",
+            "Something you'd like to be better at",
+            "The most ridiculous thing you've ever bought",
+            "Something that makes you feel sick",
+            "The coldest you have ever been",
+            "The last song that you sang along to",
+            "A time that you lied",
+            "Something you didn't think you'd be able to do",
+            "An animal or plant that you think should be renamed and what you would call it",
+            "What you do when you can't sleep",
+            "What you most like to cook or eat",
+            "A time you laughed and it got you into trouble",
+            "Which Bible character you'd most like to meet and what you'd ask them",
+            "The most disgusting thing you've ever eaten",
+            "Something you're hoping will get better",
+            "The person who encourages you the most",
+            "Something about God that you don't understand",
+            "Something about yourself that you don't understand",
+            "Something that always cheers you up when you think about it",
+            "Something other people do that makes you feel uncomfortable",
+            "Something you really like about where you live",
+            "Your favourite cereal and why",
+            "Whether you'd rather have four hands or four legs",
+            "The funniest thing God has made",
+            "The coolest thing you think God's made",
+            "Show him the funniest face you can make",
+            "Tell him about the last time you hurt yourself",
+            "Something you look forward to when you wake up",
+            "Your favourite thing to do at the beach",
+            "If you could have a super power, what would it be and why",
+            "A word that you think sounds like something else",
+            "Something that makes you feel brave",
+            "Something that makes you feel loved",
+            "How you like to show other people that you care for them",
+            "Something you enjoy giving to people",
+            "What rooms you would have in a secret treehouse",
+            "A part of the Bible you don't understand",
+            "Something about grown ups that you don't understand",
+            "If you wrote a book, what it would be about",
+            "What you like to dream about",
+            "Something that makes you feel thankful",
+            "Where you would like to travel and how you would get there",
+            "A sound that you really like",
+            "What you like to do outside",
+            "A memory that makes you laugh",
+            "Three things you hope you get to do this week",
+            "Which age you'd most like to be and why",
+            "What you think heaven looks like",
+            "The best and worst things about the people that you live with",
+            "The most disgusting thing you can think of",
+            "Something you just learnt",
+            "Something you'd like to change about the world",
+            "Your favourite fruit",
+            "Something about you which makes you a good friend",
+            "Something you've seen that made you think",
+            "A rule that you don't like following",
+            "Something you know today that you didn't know yesterday",
+            "Something you are proud of",
+            "If you could change your name, what you would change it to",
+            "Sing him your favourite song",
+            "Something you hear a lot",
+            "Your favourite sort of weather",
+            "The funniest word you know",
+            "How you feel when you're on your own",
+            "What you like chatting to God about most"
+        ];
+
+        let usedQuestions = [];
+        let availableQuestions = [...questions];
+
+        function generateQuestion() {
+            if (availableQuestions.length === 0) {
+                document.getElementById('questionDisplay').innerHTML = 
+                    '<p class="question-text">🎉 You\'ve used all 101 questions! Click "Start Over" to begin again.</p>';
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            const selectedQuestion = availableQuestions[randomIndex];
+            
+            // Move question from available to used
+            usedQuestions.push(selectedQuestion);
+            availableQuestions.splice(randomIndex, 1);
+            
+            // Display the question
+            document.getElementById('questionDisplay').innerHTML = 
+                `<p class="question-text">Share with God: ${selectedQuestion}</p>`;
+            
+            // Update stats
+            document.getElementById('questionCount').textContent = 
+                `Questions used: ${usedQuestions.length}/101`;
+            
+            // Show reset button after first question
+            if (usedQuestions.length === 1) {
+                document.getElementById('resetBtn').style.display = 'inline-block';
+            }
+            
+            // Change button text after first click
+            document.getElementById('generateBtn').textContent = 'Get Another Question';
+        }
+
+        function resetQuestions() {
+            usedQuestions = [];
+            availableQuestions = [...questions];
+            
+            document.getElementById('questionDisplay').innerHTML = 
+                '<p class="placeholder-text">Click the button below to get a conversation starter!</p>';
+            document.getElementById('questionCount').textContent = 'Questions used: 0/101';
+            document.getElementById('generateBtn').textContent = 'Get a Question';
+            document.getElementById('resetBtn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
